@@ -1,0 +1,206 @@
+<!-- 2.html -->
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>WEB1 - CSS</title>
+        <meta charset="utf-8">
+        <style>
+            body {
+                margin: 0px;
+            }
+            #active {
+                color: red;
+            }
+            .tree input[type="checkbox"]{
+              display:none;
+            }
+            .tree input[type="checkbox"]:checked~ul{
+              display:none;
+            }
+            .saw {
+                color: gray;
+            }
+            a {
+                color: black;
+                text-decoration: none;
+            }
+            /*h1 {
+                font-size: 45px;
+                text-align: center;
+                border-bottom: 1px solid gray;
+                margin: 0px;
+                padding: 20px;
+            }*/
+            ol {
+                border-right: 1px solid gray;
+                width: 100px;
+                margin: 0;
+                padding: 20px;
+            }
+            .card{
+              display:inline-block;
+              width:300px;
+              padding:0px;
+              padding-bottom:15px;
+              margin-left:30px;
+            }
+            #grid {
+                display: grid;
+                grid-template-columns: 500px 1fr;
+                margin-left:50px;
+            }
+            #article {
+                padding-left: 100px;
+            }
+        </style>
+    </head>
+    <body>
+      <header>
+        <div id="top_columns">
+          <div class="card">
+            <h1><img src="https://www.kolmar.co.kr/eng/images/header/h_logo.png"></h1>
+          </div>
+          <div class="card">
+            <ul>
+              <li class="on">
+                <a href="">Make up</a>
+                <div class="depth2_1 dep2" style="display: none;">
+                  <ul>
+                    <li class="on">
+                      <span>Lipstick</span>
+                    </li>
+                    <li>
+                      <span>BB Cream</span>
+                    </li>
+                    <li>
+                      <span>eye shadow</span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </div>
+
+            <div class="card">
+              <li class="on">
+                <a href="">Skin Care</a>
+                <div class="depth2_1 dep2" style="display: none;">
+                  <ul>
+                    <li class="on">
+                      <span>Lipstick</span>
+                    </li>
+                    <li>
+                      <span>BB Cream</span>
+                    </li>
+                    <li>
+                      <span>eye shadow</span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </div>
+            </ul>
+        </div>
+
+      </header>
+
+      <img src="https://www.kolmar.co.kr/eng/images/sub_visual/sub_visual1_1_0.jpg" width=100%>
+
+        <div id="grid">
+            <ul class="tree">
+                <li>
+                  <input type="checkbox" id="root">
+                  <label for="root">쉐입</label>
+                  <ul>
+                    <li>
+                      <input type="checkbox" id="root">
+                      <label for="root">외용기:사각형</label>
+                      <ul>
+                        <li><a href="shape_s_1_default.html"><font color="blue">내용기:1단</font></a></li>
+                        <li><a href="shape_s_2_default.html"><font color="blue">내용기:2단</font></a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="root">
+                      <label for="root">외용기:원형</label>
+                      <ul>
+                        <li><a href="shape_c_1_default.html"><font color="blue">내용기:1단</font></a></li>
+                        <li><a href="shape_c_2_default.html"><font color="black">내용기:2단</font></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <input type="checkbox" id="root">
+                  <label for="root">재질</label>
+                  <ul>
+                    <li>
+                      <input type="checkbox" id="root">
+                      <label for="root">플라스틱</label>
+                      <ul>
+                        <li>
+                          <input type="checkbox" id="root">
+                          <label for="root">무광플라스틱</label>
+                          <ul>
+                            <li><a href="shape_c_2_matte_plastic.html"><font color="black">일반 무광 플라스틱</font></a></li>
+                            <li><a href="shape_c_2_matte_plastic_rubber.html"><font color="blue">라바코팅 증착</font></a></li>
+                          </ul>
+                        <li>
+                          <input type="checkbox" id="root">
+                          <label for="root">유광플라스틱</label>
+                          <ul>
+                            <li>골드펄 증착</li>
+                            <li>골드펄 무증착</li>
+                          </ul>
+                      </ul>
+                    </li>
+                    <li>
+                      <input type="checkbox" id="root">
+                      <label for="root">메탈</label>
+                      <ul>
+                        <li>
+                          <input type="checkbox" id="root">
+                          <label for="root">유광메탈</label>
+                          <ul>
+                            <li>캡:유광메탈</li>
+                            <li><a href="shape_c_2_glossy_metal.html"><font color="blue">캡:불투명 플라스틱</font></a></li>
+                          </ul>
+                        <li>반광메탈</li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                </li>
+
+                <li>
+                  <input type="checkbox" id="root">
+                  <label for="root">색상</label>
+                  <ul>
+                    <li>화이트</li>
+                    <li>레드</li>
+                    <li>블랙</li>
+                  </ul>
+                </li>
+              </ul>
+
+
+
+            <!--
+            <li><a href="2.html" class="saw" id="active">재질</a></li>
+
+            <h1><a href="index.html"><font color="red">WEB</font></a></h1>
+            <ol>
+                <li><a href="1.html"><font color="red">HTML</font></a></li>
+                <li><a href="2.html"><font color="red">CSS</font></a></li>
+                <li><a href="3.html"><font color="red">JavaScript</font></a></li>
+            </ol>
+            -->
+
+            <div id="article">
+                <h2>Lipstick Package Test</h2>
+                <img src="img/G/G_black.png" width=500px;>
+
+            </div>
+        </div>
+    </body>
+</html>
